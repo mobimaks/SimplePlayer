@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#55000000"
+                android:gravity="center_vertical">
+
+    <ImageButton
+        android:id="@+id/imageButton_Next_PlayerWidget"
+        android:layout_width="@dimen/widget_music_button_width"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/background_widget_btn"
+        android:contentDescription="@string/widget_next"
+        android:src="@android:drawable/ic_media_next"
+        />
+
+    <ImageButton
+        android:id="@+id/imageButton_PlayPause_PlayerWidget"
+        android:layout_width="@dimen/widget_music_button_width"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/imageButton_Next_PlayerWidget"
+        android:background="@drawable/background_widget_btn"
+        android:contentDescription="@string/widget_play_pause"
+        android:src="@android:drawable/ic_media_play"/>
+
+    <ImageButton
+        android:id="@+id/imageButton_Previous_PlayerWidget"
+        android:layout_width="@dimen/widget_music_button_width"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/imageButton_PlayPause_PlayerWidget"
+        android:background="@drawable/background_widget_btn"
+        android:contentDescription="@string/widget_prev"
+        android:src="@android:drawable/ic_media_previous"
+        />
+
+    <LinearLayout
+        android:id="@+id/layout_SongInfo_PlayerWidget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="8dp"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/imageButton_Previous_PlayerWidget"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/text_Artist_PlayerWidget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_marginBottom="5dp"
+            android:contentDescription="@string/appwidget_text"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/text_Title_PlayerWidget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
